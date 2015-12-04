@@ -8,6 +8,7 @@
 namespace Drupal\balagan\Plugin\Validation\Constraint;
 
 use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 /**
  * Checks if an entity date field has start time after end time, and end time is in the future.
@@ -17,7 +18,7 @@ use Symfony\Component\Validator\Constraint;
  *   label = @Translation("Date range constraint", context = "Validation"),
  * )
  */
-class BalaganDateRangeConstraint extends Constraint {
+class BalaganDateRangeConstraint extends Constraint implements ConstraintValidatorInterface {
 
   public $message = 'The end date has to be higher then the start date.';
 

@@ -8,6 +8,8 @@
 namespace Drupal\balagan\Plugin\Validation\Constraint;
 
 use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\ConstraintValidatorInterface;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 /**
  * Checks if an entity date field is in the past.
@@ -17,7 +19,7 @@ use Symfony\Component\Validator\Constraint;
  *   label = @Translation("Date future constraint", context = "Validation"),
  * )
  */
-class BalaganDateFutureConstraint extends Constraint {
+class BalaganDateFutureConstraint extends Constraint implements ConstraintValidatorInterface {
 
   public $message = 'The dates cannot be in the past.';
 
