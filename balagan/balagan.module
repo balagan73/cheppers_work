@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains balagan.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function balagan_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the balagan module.
+    case 'help.page.balagan':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t("Balagan's homework") . '</p>';
+      return $output;
+
+    default:
+  }
+}
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function balagan_entity_bundle_field_info_alter(&$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle) {
+  if ($entity_type->id() == 'node' && $bundle == "balagan_accomodation") {
+   $fields['field_balagan_accom_date']->addConstraint('BalaganDateRangeConstraint', []);
+   $fields['field_balagan_accom_date']->addConstraint('BalaganDateFutureConstraint', []);
+  }
+}

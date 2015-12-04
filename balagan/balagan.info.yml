@@ -1,0 +1,9 @@
+name: balagan
+type: module
+description: Test work for Cheppers
+core: 8.x
+package: Other
+dependencies:
+  - address
+  - datetime
+  - views
