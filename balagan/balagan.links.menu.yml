@@ -1,0 +1,21 @@
+balagan.avail_accom:
+  title: 'Available accommodations'
+  description: 'Available accommodations'
+  route_name: balagan.avail_accom
+  menu_name: main
+  weight: 4
+# balagan.add_accommodation:
+#   title: 'Add accommodation'
+#   description: 'Add accommodation'
+#   route_name: entity.node.edit_form
+#   menu_name: main
+# balagan.add_customer:
+#   title: 'Add customer'
+#   description: 'Add customer'
+#   route_name: entity.node.edit_form
+#   menu_name: main
+# balagan.add_reservation:
+#   title: 'Add reservation'
+#   description: 'Add reservation'
+#   route_name: node.add
+#   menu_name: main

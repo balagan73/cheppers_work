@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_balagan_accom_address
+    - node.type.balagan_accommodation
+  module:
+    - address
+id: node.balagan_accommodation.field_balagan_accom_address
+field_name: field_balagan_accom_address
+entity_type: node
+bundle: balagan_accommodation
+label: Address
+description: 'The address of the accommodation available for rent.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  fields:
+    locality: locality
+    addressLine1: addressLine1
+    administrativeArea: '0'
+    dependentLocality: '0'
+    postalCode: '0'
+    sortingCode: '0'
+    addressLine2: '0'
+    organization: '0'
+    recipient: '0'
+  langcode_override: ''
+field_type: address

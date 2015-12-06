@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_balagan_customer_phone
+    - node.type.balagan_customer
+  module:
+    - telephone
+id: node.balagan_customer.field_balagan_customer_phone
+field_name: field_balagan_customer_phone
+entity_type: node
+bundle: balagan_customer
+label: 'Telephone number'
+description: 'A phone number where the customer can be reached.'
+required: true
+translatable: false
+default_value:
+  -
+    value: '5555555'
+default_value_callback: ''
+settings: {  }
+field_type: telephone

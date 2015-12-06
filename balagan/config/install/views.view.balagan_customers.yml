@@ -331,7 +331,7 @@ display:
         description: 'Lists all the customers'
         expanded: false
         parent: ''
-        weight: -46
+        weight: 1
         context: '0'
         menu_name: main
       fields:

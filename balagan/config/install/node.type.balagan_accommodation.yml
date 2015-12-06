@@ -3,12 +3,13 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - balagan
 third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
 name: Accommodation
-type: balagan_accomodation
+type: balagan_accommodation
 description: 'An accommodation available for rent.'
 help: ''
 new_revision: false

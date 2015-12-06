@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_balagan_accom_people
+    - node.type.balagan_accommodation
+id: node.balagan_accommodation.field_balagan_accom_people
+field_name: field_balagan_accom_people
+entity_type: node
+bundle: balagan_accommodation
+label: People
+description: 'How many people can be accommodated.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

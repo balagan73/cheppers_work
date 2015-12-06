@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_balagan_reserv_accom
+    - node.type.balagan_accommodation
+    - node.type.balagan_reservation
+id: node.balagan_reservation.field_balagan_reserv_accom
+field_name: field_balagan_reserv_accom
+entity_type: node
+bundle: balagan_reservation
+label: Accommodation
+description: 'The reserved accommodation.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      balagan_accommodation: balagan_accommodation
+    sort:
+      field: _none
+field_type: entity_reference

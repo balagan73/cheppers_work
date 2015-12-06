@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.balagan_customer.field_balagan_customer_email
+    - field.field.node.balagan_customer.field_balagan_customer_phone
+    - node.type.balagan_customer
+  module:
+    - telephone
+id: node.balagan_customer.default
+targetEntityType: node
+bundle: balagan_customer
+mode: default
+content:
+  field_balagan_customer_email:
+    weight: 33
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+  field_balagan_customer_phone:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

@@ -27,7 +27,7 @@ function balagan_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_entity_bundle_field_info_alter().
  */
 function balagan_entity_bundle_field_info_alter(&$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle) {
-  if ($entity_type->id() == 'node' && $bundle == "balagan_accomodation") {
+  if ($entity_type->id() == 'node' && $bundle == "balagan_accommodation") {
    $fields['field_balagan_accom_date']->addConstraint('BalaganDateRangeConstraint', []);
    $fields['field_balagan_accom_date']->addConstraint('BalaganDateFutureConstraint', []);
   }

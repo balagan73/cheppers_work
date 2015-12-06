@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.balagan_accommodation.field_balagan_accom_address
+    - field.field.node.balagan_accommodation.field_balagan_accom_date
+    - field.field.node.balagan_accommodation.field_balagan_accom_people
+    - node.type.balagan_accommodation
+  module:
+    - address
+    - datetime
+id: node.balagan_accommodation.default
+targetEntityType: node
+bundle: balagan_accommodation
+mode: default
+content:
+  field_balagan_accom_address:
+    weight: 32
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+  field_balagan_accom_date:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_balagan_accom_people:
+    weight: 35
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

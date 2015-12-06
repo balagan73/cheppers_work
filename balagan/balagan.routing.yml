@@ -1,7 +1,7 @@
-balagan.reservation:
+balagan.avail_accom:
   path: '/free_accommodations'
   defaults:
-    _controller: '\Drupal\balagan\Controller\BalaganReservationController::content'
+    _controller: '\Drupal\balagan\Controller\BalaganAvailAccomController::content'
     _title: 'Accommodations available for rent'
   requirements:
     _permission: 'access content'

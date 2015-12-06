@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_balagan_accom_date
+    - node.type.balagan_accommodation
+  module:
+    - datetime
+id: node.balagan_accommodation.field_balagan_accom_date
+field_name: field_balagan_accom_date
+entity_type: node
+bundle: balagan_accommodation
+label: 'Date range'
+description: 'The start date and the end date of the availability of the accommodation.'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

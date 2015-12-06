@@ -2,12 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_balagan_accom_date
-    - field.storage.node.field_balagan_accom_people
-    - node.type.balagan_accomodation
+    - node.type.balagan_accommodation
+    - system.menu.main
   module:
-    - address
-    - datetime
     - node
     - user
 id: balagan_accommodations
@@ -378,7 +375,7 @@ display:
           table: node_field_data
           field: type
           value:
-            balagan_accomodation: balagan_accomodation
+            balagan_accommodation: balagan_accommodation
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -413,9 +410,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_balagan_accom_date'
-        - 'config:field.storage.node.field_balagan_accom_people'
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -424,6 +419,15 @@ display:
     display_options:
       display_extenders: {  }
       path: accommodations
+      menu:
+        type: normal
+        title: 'List accommodations'
+        description: 'Lists all the accommodations'
+        expanded: false
+        parent: ''
+        weight: 3
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: 0
       contexts:
@@ -432,6 +436,4 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_balagan_accom_date'
-        - 'config:field.storage.node.field_balagan_accom_people'
+      tags: {  }
