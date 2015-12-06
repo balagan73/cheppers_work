@@ -32,3 +32,14 @@ function balagan_entity_bundle_field_info_alter(&$fields, \Drupal\Core\Entity\En
    $fields['field_balagan_accom_date']->addConstraint('BalaganDateFutureConstraint', []);
   }
 }
+
+/*
+Code to uninstall fields if needed.
+Drupal::configFactory()->getEditable('field.storage.node.field_balagan_accom_address')->delete();
+Drupal::configFactory()->getEditable('field.storage.node.field_balagan_reserv_customer')->delete();
+Drupal::configFactory()->getEditable('field.storage.node.field_balagan_reserv_accom')->delete();
+Drupal::configFactory()->getEditable('field.storage.node.field_balagan_accom_date')->delete();
+Drupal::configFactory()->getEditable('field.storage.node.field_balagan_accom_people')->delete();
+Drupal::configFactory()->getEditable('field.storage.node.field_balagan_customer_email')->delete();
+Drupal::configFactory()->getEditable('field.storage.node.field_balagan_customer_phone')->delete();
+*/
